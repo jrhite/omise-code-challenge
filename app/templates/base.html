@@ -1,0 +1,20 @@
+<!doctype html>
+<title>{% block title %}{% endblock %} - Omise Code Challenge</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<nav>
+  <h1>Omise Code Challenge</h1>
+  <ul>
+    <li><a href="{{ url_for('json_transformer') }}">JSON Transformer</a>
+    <li><a href="{{ url_for('github_elixir_search') }}">GitHub Elixir Search</a>
+  </ul>
+</nav>
+<section class="content">
+  <header>
+    {% block header %}{% endblock %}
+  </header>
+  {% for message in get_flashed_messages() %}
+    <div class="flash">{{ message }}</div>
+  {% endfor %}
+  {% block content %}{% endblock %}
+</section>
+

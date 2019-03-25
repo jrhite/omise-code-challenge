@@ -1,0 +1,31 @@
+
+curl -I "https://api.github.com/search/repositories?q=elixir&page=1"
+
+Link: <https://api.github.com/search/repositories?q=elixir&page=2>; rel="next",
+      <https://api.github.com/search/repositories?q=elixir&page=34>; rel="last"
+
+
+
+curl -I "https://api.github.com/search/repositories?q=elixir&page=34"
+
+Link: <https://api.github.com/search/repositories?q=elixir&page=33>; rel="prev",
+      <https://api.github.com/search/repositories?q=elixir&page=1>; rel="first"
+
+
+
+curl -I "https://api.github.com/search/repositories?q=elixir&page=14"
+
+Link: <https://api.github.com/search/repositories?q=elixir&page=13>; rel="prev",
+      <https://api.github.com/search/repositories?q=elixir&page=15>; rel="next",
+      <https://api.github.com/search/repositories?q=elixir&page=34>; rel="last",
+      <https://api.github.com/search/repositories?q=elixir&page=1>; rel="first"
+
+
+
+curl -I "https://api.github.com/search/repositories?q=elixir&page=14&per_page=2"
+
+Link: <https://api.github.com/search/repositories?q=elixir&page=13&per_page=2>; rel="prev",
+      <https://api.github.com/search/repositories?q=elixir&page=15&per_page=2>; rel="next",
+      <https://api.github.com/search/repositories?q=elixir&page=500&per_page=2>; rel="last",
+      <https://api.github.com/search/repositories?q=elixir&page=1&per_page=2>; rel="first"
+

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}JSON Transformer{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <form method="POST">
+    <label for="json_input">Input JSON</label>
+    <textarea rows="12" cols="90" name="json_input" id="json_input" class="json_io" required></textarea>
+    <input type="submit" value="Submit">
+  </form>
+{% endblock %}
+
